@@ -2,41 +2,32 @@
 
 AI-powered security scanning for GitHub repositories.
 
-## Quick Start
+## Deploy (one command)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/tim777z/precog-api)
 
 ```bash
-# Run locally
-pip install -e .
-uvicorn app.main:app --reload
+# Or deploy to Fly.io
+fly deploy
+```
 
+## API
+
+```bash
 # Scan a repo
-curl -X POST http://localhost:8000/scan \
+curl -X POST https://your-domain.com/scan \
   -H "Content-Type: application/json" \
   -d '{"repo_url": "https://github.com/tim777z/PreCogSecurity"}'
 ```
 
-## Deploy
-
-```bash
-# Docker
-docker build -t precog-api .
-docker run -p 8000:8000 precog-api
-
-# Or deploy to Render/Railway/Fly.io
-```
-
 ## Pricing
 
-| Plan | Price | Scans | Repos |
-|------|-------|-------|-------|
-| Free | $0/mo | 5 | Public only |
-| Pro | $29/mo | Unlimited | Public + Private |
-| Team | $99/mo | Unlimited | + API + Support |
-
-## Contact
-
-timlangeveldt@gmail.com
+| Plan | Price | Scans |
+|------|-------|-------|
+| Free | $0/mo | 5 |
+| Pro | $29/mo | Unlimited |
+| Team | $99/mo | Unlimited + API |
 
 ## License
 
-Proprietary - PreCog Security
+Proprietary — PreCog Security

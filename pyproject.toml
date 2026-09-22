@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "precog-api"
+version = "1.0.0"
+description = "AI-powered security scanning API for code repositories"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi==0.115.0",
+    "uvicorn==0.30.0",
+    "bandit==1.7.9",
+    "gitpython==3.1.43",
+    "httpx==0.27.0",
+]
